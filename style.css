@@ -1,0 +1,88 @@
+body
+
+/*define o estilo geral da página*/
+    {
+    font-family: 'Teko', sans-serif;
+    font-size: 50px;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /*animação do background*/
+    background-image: #000;
+    background-image: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+
+}
+
+
+
+/*cria a matrix 2x2 dos quadrados*/
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.info-card {
+    width: 350px;
+    height: 350px;
+    padding: 10px;
+    border-radius: 20px;
+    background-image: linear-gradient(to right, #b9eeeb, #e9a4bb, #afe7f3);
+    margin: 0;
+    box-shadow: 10px 5px 15px rgba(71, 71, 71, 0.719);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.info-card:hover {
+    /* Adicione um efeito de hover para indicar interatividade */
+    transform: scale(1.25);
+}
+
+.conteudo {
+    border: 2px solid #ccc; /* Quadro cinza claro de 2px */
+    padding: 10px; /* Espaço interno do quadro */
+    background-color: #f0f0f0; /* Cor de fundo */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-family: 'Teko', sans-serif;
+    font-size: 50px;
+    padding: 20px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1; /* Set z-index to a negative value to place the canvas behind the cards */
+};

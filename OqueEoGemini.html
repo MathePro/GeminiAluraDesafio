@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hacker.exe</title>
+  <link href="https://fonts.googleapis.com/css?family=Teko:700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="secStyle.css">
+  <style>
+    body {background-image: linear-gradient(to right, rgba(255, 0, 0, 0.041), rgba(255, 255, 0, 0.185)); /* Gradiente de vermelho para amarelo */
+      background-color: rgb(255, 255, 255); /* Fundo branco semitransparente */}
+  </style>
+</head>
+<body>
+    <div class="center">
+    <p id="conteudo"></p>
+</div>
+  <script>
+    // Obtém o parâmetro "texto" da URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const texto = urlParams.get('texto');
+
+    // Exibe o texto na página
+    document.getElementById('conteudo').textContent = texto;
+
+  </script>
+  <script src="dados.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
